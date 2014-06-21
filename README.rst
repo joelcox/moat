@@ -9,7 +9,7 @@ Example
 First, mix the UserMixin and ResourceMixin with your User class and the
 resources you want to provide authorization for.
 
-.. code-block:: pycon
+.. code-block:: python
 
     from moat import ResourceMixin, UserMixin
 
@@ -33,7 +33,7 @@ to the main Moat class.
 
 Now you can check whether a user is actually authorized to do certain things:
 
-.. code-block:: pycon
+.. code-block:: python
 
     from moat import Moat, Permissions
     from moat.repositories import MockRepository
