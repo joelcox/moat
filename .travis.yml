@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+# Install hard dependencies and pep8 separately
+install:
+  - pip install -r requirements.txt --use-mirrors
+  - pip install --use-mirrors pep8
+# Make sure we run pep8 first
+before_script: pep8 moat tests
+script: nosetests
