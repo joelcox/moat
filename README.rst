@@ -1,7 +1,8 @@
 Moat
 ====
 
-A simple authorization API for Python.
+Moat provides an elegant way to check and manipulate permissions for Python
+objects.
 
 Example
 -------
