@@ -32,7 +32,9 @@ class MockRepository(Repository):
         }
 
     def has_permission(self, permission, user, resource):
-        return self.permissions[user.identifier()][resource.identifier()][permission.name]
+        user_id = user_identifier()
+        resource_id = resource.identifier()
+        return self.permissions[user_id][resource_id][permission.name]
 
     def set_permission(self, permission, user, resource):
         self.permissions[user.identifier()][resource.identifier()][
